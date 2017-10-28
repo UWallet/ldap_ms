@@ -21,11 +21,10 @@ public class LdapCrudsResource{
     @POST
     public Response create( User user ){
        LdapService login = new LdapService();
-       int code=login.creation(user.getEmail(), user.getPassword(),user.getName(), user.getLastName());
+       int code=login.creation(user.getEmail(), user.getPassword(),user.getFirstName(), user.getLastName());
        if (code == 200){
         return Response.status( Response.Status.CREATED ).build( );
       } else if (code == 400){
-          System.out.println("estoy en el 400 papu");
           return Response.status( Response.Status.BAD_REQUEST ).build( );
       }
         else if (code == 503){
