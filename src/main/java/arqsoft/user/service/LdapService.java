@@ -27,7 +27,7 @@ public class LdapService {
 
     public Boolean connect(){
 
-        String ldapHost = "192.168.99.101";
+        String ldapHost = "192.168.99.104";
         String dn = "cn=admin,dc=uwallet,dc=unal,dc=edu,dc=co";
         String password = "admin";
         int ldapPort =  LDAPConnection.DEFAULT_PORT;
